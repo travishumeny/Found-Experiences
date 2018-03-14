@@ -1,0 +1,52 @@
+.tip {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  text-align: left;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+.tip-author {
+  font-family: Montserrat-Medium;
+  font-size: 14px;
+  margin: 8px 0;
+  text-transform: capitalize;
+}
+
+.tip-content {
+  font-family: Montserrat;
+  width: 175px;
+  white-space: wrap;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.all-tips {
+  margin: 8px 0;
+  color: #7a74d2;
+  text-decoration: underline;
+  font-size: 11px;
+}
+
+.round-image {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 100%;
+}
+
+.round-image img {
+  position: absolute;
+  left: -9px;
+  top: -9px;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+}

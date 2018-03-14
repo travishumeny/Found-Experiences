@@ -1,0 +1,84 @@
+.place-image {
+  width: 254px;
+  height: 254px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  padding: 18px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+.place-image::before {
+  opacity: 0;
+}
+.place-image:hover {
+  cursor: pointer;
+}
+.place-image:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #12195f;
+  opacity: 0.5;
+  -webkit-transition: opacity 300ms ease-out;
+  transition: opacity 300ms ease-out;
+}
+.place-image:hover .photographer-photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.place-image * {
+  z-index: 2;
+}
+.place-image .photographer-photo {
+  display: none;
+}
+.place-image
+  .photographer-photo
+  .photographer-name {
+  margin-top: 20px;
+  height: 14px;
+  font-family: Montserrat-Medium;
+  font-weight: 500;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.round-image {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 100%;
+}
+
+.round-image img {
+  position: absolute;
+  left: -9px;
+  top: -9px;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+}

@@ -1,0 +1,17 @@
+.info-element {
+  display: block;
+}
+
+.info-element img {
+  height: 10px;
+  width: 10px;
+  margin-right: 8px;
+}
+
+.info-element div {
+  display: inline-block;
+  vertical-align: middle;
+  color: #fff;
+  font-family: Montserrat-Medium;
+  font-size: 12px;
+}

@@ -1,0 +1,48 @@
+.splash {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 600px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.splash-header {
+  font-family: Montserrat-XLight;
+  text-align: center;
+  width: 590px;
+  margin-top: 23px;
+  font-size: 55px;
+  line-height: 55px;
+  color: #ffffff;
+}
+.splash-text {
+  font-family: Montserrat-XLight;
+  text-align: center;
+  width: 543px;
+  margin-top: 23px;
+  font-size: 16px;
+  line-height: 16px;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 590px) {
+.splash-logo {
+    display: none;
+  }
+.splash-header {
+    width: 100%;
+    font-size: 33px;
+  }
+.splash-text {
+    width: 100%;
+  }
+.search {
+    width: 80%;
+    margin-top: 50px;
+  }
+}

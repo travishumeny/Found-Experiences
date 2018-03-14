@@ -1,0 +1,109 @@
+.search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 65px;
+  width: 550px;
+}
+.search input {
+  border: none;
+  padding: 0 15px;
+  height: 45px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 12px 21px 0 rgba(0, 0, 0, 0.24);
+          box-shadow: 0 12px 21px 0 rgba(0, 0, 0, 0.24);
+  outline: none;
+  font-family: Montserrat-Medium;
+}
+
+.search input::-webkit-input-placeholder {
+  font-size: 14px;
+  font-weight: 500;
+  color: #9b9b9b;
+}
+
+.search input:-ms-input-placeholder {
+  font-size: 14px;
+  font-weight: 500;
+  color: #9b9b9b;
+}
+
+.search input::-ms-input-placeholder {
+  font-size: 14px;
+  font-weight: 500;
+  color: #9b9b9b;
+}
+
+.search input::placeholder {
+  font-size: 14px;
+  font-weight: 500;
+  color: #9b9b9b;
+}
+.search-term {
+  width: 255px;
+}
+.search-location {
+  width: 126px;
+}
+.search button {
+  position: relative;
+  width: 70px;
+  height: 45px;
+  border: none;
+  border-radius: 4px;
+  background-color: #ff5f5f;
+  -webkit-box-shadow: 0 12px 21px 0 rgba(0, 0, 0, 0.24);
+          box-shadow: 0 12px 21px 0 rgba(0, 0, 0, 0.24);
+  -webkit-transition: background-color 300ms ease-out;
+  transition: background-color 300ms ease-out;
+  outline: none;
+}
+.search button img {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  top: 8px;
+  left: 12px;
+}
+.search button:hover {
+  cursor: pointer;
+  background-color: #ff7e7e;
+}
+.search button:disabled {
+  cursor: not-allowed;
+  background-color: #ffe5e5;
+}
+
+@media screen and (max-width: 590px) {
+  .search {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-top: 0;
+    margin-left: 25px;
+    height: 140px;
+    position: relative;
+  }
+  .search input {
+    width: 60% !important;
+  }
+  .search button {
+    position: absolute !important;
+    top: 50px;
+    right: 5%;
+  }
+}

@@ -1,0 +1,11 @@
+.venue-image-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 600px;
+  margin-bottom: 60px; }
+
+@media screen and (max-width: 1145px) {
+  .venue-image-list {
+    width: 290px; } }
