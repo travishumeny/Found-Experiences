@@ -8,7 +8,7 @@ import Footer from '../../components/common/Footer'
 const Venues = () => (
   <Parent>
     <PlacesHeader/>
-    <div class="content">
+    <div className="content">
       <Recents/>
       <PlacesList/>
     </div>

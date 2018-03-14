@@ -14,7 +14,7 @@ const PlaceDetails = ({fetchData}) => {
 	return(
 	  <Parent>
 	    <PlaceDetailsHeader/>
-	    <div class="content">
+	    <div className="content">
 	      <PlaceImageList/>
 	      <Tips/>
 	    </div>

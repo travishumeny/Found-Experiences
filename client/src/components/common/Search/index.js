@@ -13,13 +13,13 @@ const Search = ({loading, onSearchSubmit}) => (
 			name="query"
 			autoComplete="off"
 			required
-			placeholder="I'm looking for"/>
+			placeholder="I'm looking for..."/>
 		<input className="search-location"
 			type="text"
 			name="near"
 			autoComplete="off"
 			required
-			placeholder="place"/>
+			placeholder="near this place."/>
 		<button className="search-submit"
 			disabled={loading}
 			type="submit">

@@ -15,7 +15,10 @@
   padding: 18px;
   overflow: hidden;
   margin-top: 20px;
+  border-radius: 15px;
+  margin-left: 20px;
 }
+
 .places-result::before {
   content: "";
   position: absolute;
@@ -45,7 +48,7 @@
   width: 48px;
   height: 2px;
   border-bottom: solid 2px #c4c0ff;
-  margin: 12px 0;
+  margin: 12px auto;
 }
 .result-info {
   display: -webkit-box;
@@ -60,8 +63,10 @@
   justify-content: space-between;
   width: 140px;
 }
+
 .result-rating {
   position: absolute;
+  display: table;
   font-family: Montserrat-Medium;
   font-size: 15px;
   bottom: -20.5px;
@@ -75,9 +80,17 @@
 }
 .result-rating span {
   color: white;
-  position: absolute;
-  left: 25px;
-  top: 23px;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  padding-right: 5px;
+  padding-bottom: 11px;
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
+}
+
+@media screen and (max-width: 500px) {
+  .places-result {
+    margin-left: 0px;
+  }
 }

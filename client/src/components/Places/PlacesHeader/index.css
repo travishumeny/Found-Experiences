@@ -7,10 +7,11 @@
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   height: 150px;
+  padding: 0px 80px;
 }
 .header::before {
   content: "";
@@ -19,20 +20,31 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: linear-gradient(97deg, #1e0db4, #e44747);
-  opacity: 0.8;
+  background-image: linear-gradient(97deg, #0c65b4, #e44747);
+  opacity: 0.6;
 }
 .header * {
   z-index: 2;
 }
 .homepage {
-  width: 150px;
-  top: -15px;
-  margin-right: 300px;
+  width: 110px;
+  margin-top: 20px;
 }
 
-@media screen and (max-width: 1000px) {
-  .header > a img {
+.logo {
+  width: 200px;
+  height: 80px;
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 800px) {
+  .header img {
     display: none;
+  }
+
+  .header {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }

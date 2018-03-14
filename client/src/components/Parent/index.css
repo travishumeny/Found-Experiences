@@ -10,14 +10,13 @@
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 20px;
-  padding: 0 5px;
 }
 .parent .content .tips {
   margin-top: -70px;
   z-index: 3;
 }
 
-@media screen and (max-width: 590px) {
+@media screen and (max-width: 800px) {
   .parent .content .recents,
   .parent .content .tips {
     display: none;

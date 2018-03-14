@@ -1,11 +1,27 @@
 .venue-image-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 600px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 620px;
   margin-bottom: 60px; }
 
-@media screen and (max-width: 1145px) {
+  @media screen and (max-width: 1145px) {
+    .venue-image-list {
+      width: 290px; } }
+
+@media screen and (max-width: 800px) {
+  .venue-image-list {
+    width: 620px; } }
+
+@media screen and (max-width: 650px) {
   .venue-image-list {
     width: 290px; } }

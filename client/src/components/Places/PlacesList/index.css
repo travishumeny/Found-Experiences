@@ -8,15 +8,38 @@
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 600px;
+-webkit-box-pack: start;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+  width: 940px;
   margin-bottom: 60px;
 }
 
+.places:last-child {
+  display:hidden
+}
+
+@media screen and (max-width: 1300px) {
+  .places {
+    width: 640px;
+  }
+}
+
+
 @media screen and (max-width: 1145px) {
   .places {
-    width: 290px;
+    width: 320px;
+  }
+}
+
+@media screen and (max-width: 799px) {
+  .places {
+    width: 640px;
+  }
+}
+
+@media screen and (max-width: 677px) {
+  .places {
+    width: 330px;
   }
 }

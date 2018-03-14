@@ -6,8 +6,8 @@
   margin-left: 41px;
   margin-right: 41px;
   background-color: #ffffff;
-  -webkit-box-shadow: 0 0 34px 0 rgba(255, 95, 95, 0.32);
-  box-shadow: 0 0 34px 0 rgba(255, 95, 95, 0.32);
+  -webkit-box-shadow: 0 0 34px 0 rgba(180, 12, 73, 0.32);
+  box-shadow: 0 0 34px 0 rgba(180, 12, 73, 0.32);
 }
 
 .sidebar-header {

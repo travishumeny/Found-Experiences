@@ -27,6 +27,10 @@
   text-overflow: ellipsis;
 }
 
+.tip-details {
+  max-width: 175px;
+}
+
 .all-tips {
   margin: 8px 0;
   color: #7a74d2;

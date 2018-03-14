@@ -8,10 +8,10 @@ const PlaceDetailsImage = ({
 }) => (
 		<div className="place-image" style={{'background':`url(${img}) center / cover no-repeat` }}>
 			<div className="photographer-photo">
+				<div className="photographer-name">{userName}</div>
 				<div className="round-image">
 					<img src={userImg} alt={'img'}/>
 				</div>
-				<div className="photographer-name">{userName}</div>
 			</div>
 		</div>
 )
