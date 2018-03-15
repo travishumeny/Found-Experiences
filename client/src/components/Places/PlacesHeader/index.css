@@ -38,7 +38,7 @@
 }
 
 @media screen and (max-width: 800px) {
-  .header img {
+  .header a img {
     display: none;
   }
 
@@ -46,5 +46,9 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+
+  .header {
+    padding: 0px;
   }
 }

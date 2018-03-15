@@ -1,15 +1,17 @@
 import React from 'react';
 import location from '../../../assets/images/near.png'
 import contact from '../../../assets/images/phone.png'
+import arrowback from '../../../assets/images/arrow-back.png'
 import background from '../../../assets/images/background.jpg'
 import PlaceContactInfo from '../PlaceContactInfo'
 import PriceLevel from '../../common/PriceLevel'
 import CreatePlace from './CreatePlace';
+
 import './index.css'
 
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
-import { addSavedPlace, removeSavedPlace, updateSavedPlace } from '../../../actions';
+import { addSavedPlace, removeSavedPlace } from '../../../actions';
 
 const PlaceDetailsHeader = ({
 	id = 0,
@@ -22,11 +24,17 @@ const PlaceDetailsHeader = ({
 	img = background,
 	onAddPlace
 }) => (
+	<div>
 	<div className="place-detail-header" style={{'background':`url(${img}) center / cover no-repeat` }}>
 		<div className="place-detail-title parent">
 			{name}
 		</div>
 		<div className="place-detail-info">
+				<div className="arrowback">
+					<Link to={'/places'}>
+					<img src={arrowback} className="arrow" alt="home"/>
+					</Link>
+				</div>
 			<div className="parent">
 				<PlaceContactInfo icon={location} value={address}/>
 				<PlaceContactInfo icon={contact} value={phone}/>
@@ -36,10 +44,11 @@ const PlaceDetailsHeader = ({
 		<div className="place-detail-rating">
 			<span>{rating}</span>
 		</div>
-		<div className="create-form">
-			<CreatePlace onCreate={onAddPlace} />
-		</div>
 	</div>
+	<div className="place-save">
+		<CreatePlace onCreate={onAddPlace} />
+	</div>
+</div>
 )
 
 const mapStateToProps = ({placeDetails}) => ({...placeDetails})

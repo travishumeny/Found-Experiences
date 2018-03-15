@@ -8,7 +8,9 @@ import {Link} from 'react-router-dom'
 
 const PlacesHeader = () => (
 	<header className="header" style={{'background':`url(${background}) center / cover no-repeat` }}>
+	<Link to={'/'}>
 	<img className="logo" src={found} alt="found."/>
+	</Link>
 		<Link to={'/'}>
 			<img className="homepage" src={homepage} alt="homepage"/>
 		</Link>

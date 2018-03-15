@@ -81,29 +81,3 @@
   cursor: not-allowed;
   background-color: #ffe5e5;
 }
-
-@media screen and (max-width: 590px) {
-  .search {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    margin-top: 0;
-    margin-left: 25px;
-    height: 140px;
-    position: relative;
-  }
-  .search input {
-    width: 60% !important;
-  }
-  .search button {
-    position: absolute !important;
-    top: 50px;
-    right: 5%;
-  }
-}

@@ -6,7 +6,7 @@ import { fetchAllPlaces } from "../../../actions";
 const Recents = ({ recentSearches, onClick }) => (
   <Sidebar otherClass="recents" heading={"RECENT SEARCHES"}>
     {recentSearches.map((e, i) => (
-      <div key={i} onClick={() => onClick(e)} className="history-list-element">
+      <div key={i} onClick={() => onClick(e)} className="sidebar-list-element">
         <div key={i} style={{ textTransform: "capitalize" }}>
           {" "}
           {e.query} near {e.near}

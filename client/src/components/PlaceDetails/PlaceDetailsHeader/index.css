@@ -38,6 +38,20 @@
   color: #ffffff;
 }
 
+img.arrow {
+  width: 80px;
+  height: 40px;
+  z-index: 4 !important;
+  padding-left: 30%;
+  padding-top: 22px;
+}
+
+.arrowback {
+  z-index: 5;
+  width: 80px;
+  height: 40px;
+}
+
 .place-detail-info {
   height: 105px;
   opacity: 0.7;
@@ -45,6 +59,15 @@
   padding: 9px 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 .info-element {
@@ -83,8 +106,64 @@
   z-index: 2
 }
 
+button.bookmark img {
+  height: 60px;
+}
+
+.bookmark {
+  background-color: transparent;
+  border-color: transparent;
+  height: 40px;
+  z-index: 0 !important;
+}
+
+.place-save {
+  z-index: 4;
+  position: absolute;
+  display: table;
+  top: 218px;
+  left: 30%;
+  opacity: 1;
+}
+
 @media screen and (max-width: 1000px) {
   .place-detail-title {
     font-size: 35px;
+  }
+  .arrowback, .arrowback a, img.arrow {
+    position: absolute;
+    top: 0px;
+    left: 5px;
+  }
+
+  .place-save {
+    position: absolute;
+    display: table;
+    left: 30%;
+    top: 230px;
+    width: 65px;
+    height: 65px;
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .place-detail-title {
+    font-size: 35px;
+  }
+  .arrowback, .arrowback a, img.arrow {
+    position: absolute;
+    top: 0px;
+    left: 5px;
+  }
+
+  .place-save {
+    position: absolute;
+    display: table;
+    left: 82%;
+    top: 15px;
+    width: 65px;
+    height: 65px;
+    opacity: 1;
   }
 }

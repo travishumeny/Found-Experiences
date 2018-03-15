@@ -1,7 +1,12 @@
-import axios from 'axios'
+import axios from 'axios';
 
 const foursquare = axios.create({
 	baseURL: 'https://api.foursquare.com/v2',
+	params: {
+		client_id: "C3WBJLCEUINOXMWP2FXZVUXW1BJCIPU5BH2ZE0X4GHIOY0LY",
+		client_secret: "ZEX21D1GYVOIZXL2L5ZFN3PJIESNZDFUAKTB3AUYQJRKJDIS",
+		v: '20180312'
+	}
 })
 
 const PLACE_SAVE_URL = 'http://localhost:3001/places';
@@ -19,16 +24,13 @@ const getPhotoUrl = (photo, size) => {
 export default {
 
 	fetchAllPlaces: ({near, query}) => {
-		console.log("got here")
 		return foursquare.get(`/venues/explore`, {
 			params:{
 				near,
 				query,
-				limit: 20,
+				limit: 21,
 				venuePhotos: 1,
-				client_id: "C3WBJLCEUINOXMWP2FXZVUXW1BJCIPU5BH2ZE0X4GHIOY0LY",
-				client_secret: "ZEX21D1GYVOIZXL2L5ZFN3PJIESNZDFUAKTB3AUYQJRKJDIS",
-				v: '20180312'
+
 			}
 		}).then(r => {
 			console.log(r)
@@ -49,13 +51,7 @@ export default {
 
 
 	fetchPlaceDetails: ({id}) => {
-		return foursquare.get(`/venues/${id}`, {
-			params: {
-				client_id: "C3WBJLCEUINOXMWP2FXZVUXW1BJCIPU5BH2ZE0X4GHIOY0LY",
-				client_secret: "ZEX21D1GYVOIZXL2L5ZFN3PJIESNZDFUAKTB3AUYQJRKJDIS",
-				v: '20180312'
-			}
-		}).then(r => {
+		return foursquare.get(`/venues/${id}`).then(r => {
 			const venue = r.data.response.venue
 
 			return {
@@ -68,20 +64,26 @@ export default {
 				tipCount: venue.tips.count,
 				price: venue.price ? venue.price.tier : null,
 				photos: venue.photos.groups[0].items.map( p => {
+					var owner = p.user;
 					return {
 						img: getPhotoUrl(p, '290'),
 						userImg: getPhotoUrl(p.user.photo, '128'),
-						userName: `${p.user.firstName} ${p.user.lastName}`
-					}
+						userName: (owner.hasOwnProperty('lastName'))
+              ? `${owner.firstName} ${owner.lastName}`
+              : `${owner.firstName} `
+          }
 				}),
 				tipsarray: venue.tips.groups[0].items.map(ta => {
 					return ta.text
 				}).slice(0,10),
 				tips: venue.tips.groups[0].items.map( t => {
-					return {
-						userImg: getPhotoUrl(t.user.photo, '128'),
-						userName: `${t.user.firstName} ${t.user.lastName}`,
-						text: t.text
+					var author = t.user;
+          return {
+            userImg: getPhotoUrl(author.photo, "128"),
+            userName: (author.hasOwnProperty('lastName'))
+              ? `${author.firstName} ${author.lastName}`
+              : `${author.firstName} `,
+            text: t.text
 					}
 				}).slice(0,5)
 			}

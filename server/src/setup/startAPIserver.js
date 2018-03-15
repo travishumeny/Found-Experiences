@@ -1,18 +1,19 @@
 import axios from "axios";
 import moment from "moment";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 export default function(server) {
-  const yelpAPIkey =
-    "RVdwbXawgQKCxgdeKud93zrSuCwPYNOMfPCaC6RqMsre3gqmLYjI47cLQkv6Drhtvmg-Tbn8JvxGnIlXxQN5koXbIZplJLL3l1DHJINFWwd1RFUls6KdIuwMUg6XWnYx";
-  const googleAPIkey = "AIzaSyBjoITe7m13DKgaoCtgNp7WsYvxiKyyIMo";
-  const geocodeAPIkey = "AIzaSyALFce_gZVxOIArkBzyHCvaZOwDNGFKwlc";
-  const foursquareClientId = "C3WBJLCEUINOXMWP2FXZVUXW1BJCIPU5BH2ZE0X4GHIOY0LY";
-  const foursquareClientSecret =
-    "ZEX21D1GYVOIZXL2L5ZFN3PJIESNZDFUAKTB3AUYQJRKJDIS";
-  const foursquareURL = "https://api.foursquare.com/v2";
-  const googleURL = "https://maps.googleapis.com/maps/api/place";
-  const geocodeURL = "https://maps.googleapis.com/maps/api/geocode";
-  const yelpURL = "https://api.yelp.com/v3/businesses";
+  const yelpAPIkey = process.env.YELP_API_KEY;
+  const googleAPIkey = process.env.GOOGLE_API_KEY;
+  const geocodeAPIkey = process.env.GEOCODE_API_KEY;
+  const foursquareClientId = process.env.FOURSQUARE_CLIENT_ID;
+  const foursquareClientSecret = process.env.FOURSQUARE_CLIENT_SECRET;
+  const foursquareURL = process.env.FOURSQUARE_API_URL;
+  const googleURL = process.env.GOOGLE_API_URL;
+  const geocodeURL = process.env.GEOCODE_API_URL;
+  const yelpURL = process.env.YELP_API_URL;
 
   const googleAPI = axios.create({ baseURL: googleURL });
 

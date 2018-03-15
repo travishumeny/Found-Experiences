@@ -12,7 +12,7 @@ const PlacesElement = ({
 	img = null
 }) => {
 	return(
-		<Link to={`/place/${id}`} style={{textDecoration:'none'}} >
+		<Link to={`/place/${id}`} style={{textDecoration:'none'}} className="place-detail-link">
 			<div className="places-result" style={{'background':`url(${img}) center / cover no-repeat` }}>
 				<div className="result-name">
 					{name}

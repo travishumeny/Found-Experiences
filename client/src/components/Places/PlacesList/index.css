@@ -15,20 +15,17 @@
   margin-bottom: 60px;
 }
 
-.places:last-child {
-  display:hidden
-}
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1340px) {
   .places {
     width: 640px;
   }
 }
 
 
-@media screen and (max-width: 1145px) {
+@media screen and (max-width: 1023px) {
   .places {
-    width: 320px;
+    width: 290px;
   }
 }
 
@@ -40,6 +37,10 @@
 
 @media screen and (max-width: 677px) {
   .places {
-    width: 330px;
+    width: 290px;
+  }
+
+  a.place-detail-link {
+    display:none;
   }
 }

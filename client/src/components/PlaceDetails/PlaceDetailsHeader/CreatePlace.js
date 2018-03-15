@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux'
+import heartbookmark from '../../../assets/images/heart-bookmark.png'
 
 const handleFormSubmit = (nameInput, addressInput, tipsInput, onCreate) => {
     const name = nameInput.value;
@@ -45,15 +46,14 @@ const CreatePlace = ({
                   ref={r => {
                       tipsInput = r;
                   }} />
-            <button
-                type="submit"
-                onClick={(e) => {
-                    e.preventDefault();
-                    handleFormSubmit(nameInput, addressInput, tipsInput, onCreate);
-                }}>
-
-                SUBMIT
-            </button>
+            <button class="bookmark" onClick={(e) => {
+                e.preventDefault();
+                handleFormSubmit(nameInput, addressInput, tipsInput, onCreate);
+            }}>
+                <img src={heartbookmark}
+                  alt="Bookmark"
+                classname="heartbookmark"
+                /></button>
         </form>
     );
 };

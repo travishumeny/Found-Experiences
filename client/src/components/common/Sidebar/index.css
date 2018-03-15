@@ -1,6 +1,6 @@
 .sidebar {
   width: 290px;
-  height: 800px;
+  display: inline-block;
   padding: 15px;
   margin-top: 20px;
   margin-left: 41px;
@@ -8,6 +8,15 @@
   background-color: #ffffff;
   -webkit-box-shadow: 0 0 34px 0 rgba(180, 12, 73, 0.32);
   box-shadow: 0 0 34px 0 rgba(180, 12, 73, 0.32);
+}
+
+.sidebar.recents {
+  height: 800px
+}
+
+.sidebar.tips {
+  max-height: 750px;
+  border-radius: 20px;
 }
 
 .sidebar-header {
@@ -25,12 +34,12 @@
   margin: 0 auto;
 }
 
-.history-list {
+.sidebar-list {
   margin-top: 16px;
   padding: 0 15px;
 }
 
-.history-list-element {
+.sidebar-list-element {
   font-family: Montserrat-Medium;
   font-size: 14px;
   color: #9b9b9b;

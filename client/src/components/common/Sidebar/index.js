@@ -10,7 +10,7 @@ const Sidebar = ({heading, style = {}, children, otherClass}) => {
 				{heading}
 			</div>
 			<div className="sidebar-header-underline"></div>
-			<div className="history-list">
+			<div className="sidebar-list">
 				{children}
 			</div>
 		</sidebar>
