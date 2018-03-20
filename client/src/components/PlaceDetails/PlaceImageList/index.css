@@ -1,4 +1,4 @@
-.venue-image-list {
+.place-image-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -15,13 +15,13 @@
   margin-bottom: 60px; }
 
   @media screen and (max-width: 1145px) {
-    .venue-image-list {
+    .place-image-list {
       width: 290px; } }
 
 @media screen and (max-width: 800px) {
-  .venue-image-list {
+  .place-image-list {
     width: 620px; } }
 
 @media screen and (max-width: 650px) {
-  .venue-image-list {
+  .place-image-list {
     width: 290px; } }
