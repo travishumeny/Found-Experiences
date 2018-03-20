@@ -39,8 +39,4 @@
   .places {
     width: 290px;
   }
-
-  a.place-detail-link {
-    display:none;
-  }
 }

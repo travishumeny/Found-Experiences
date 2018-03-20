@@ -5,7 +5,7 @@ import './index.css'
 import {connect} from 'react-redux'
 
 const PlaceImageList = ({photos = []}) => (
-	<section className="venue-image-list">
+	<section className="place-image-list">
 		{photos.map((p, i) => (
 			<PlaceDetailsImage key={i} {...p}/>
 		))}
@@ -16,6 +16,3 @@ const PlaceImageList = ({photos = []}) => (
 const mapStateToProps = ({placeDetails}) => ({photos:placeDetails.photos})
 
 export default connect(mapStateToProps)(PlaceImageList)
-
-
-
