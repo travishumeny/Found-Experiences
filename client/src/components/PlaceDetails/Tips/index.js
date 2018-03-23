@@ -15,18 +15,18 @@ const Tips = ({
 		otherClass={'tips'}
 		style={{'boxShadow': '0 0 34px 0 rgba(115, 95, 255, 0.32)'}}>
 
-		{tips.map((t, i) => (
+		{tips.map((tip, i) => (
 			<div key={i} className="sidebar-child">
 				<div className="tip" key={i}>
 					<div className="round-image">
-						<img src={t.userImg} alt={'img'}/>
+						<img src={tip.userImg} alt={'img'}/>
 					</div>
 					<div className="tip-details">
 						<div className="tip-author">
-							{t.userName}
+							{tip.userName}
 						</div>
-						<div className="tip-content" title={t.text}>
-							{t.text}
+						<div className="tip-content" title={tip.text}>
+							{tip.text}
 						</div>
 					</div>
 				</div>

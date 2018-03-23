@@ -83,8 +83,8 @@ function* watchUpdatePlace() {
 
 function* fetchAllPlaces(action) {
   try {
-      const venues = yield call(Api.fetchAllPlaces, action.payload);
-      yield put(handleAllPlaces({venues}));
+      const places = yield call(Api.fetchAllPlaces, action.payload);
+      yield put(handleAllPlaces({places}));
    } catch (e) {
       yield put(handleError({message: e.message}));
    }
@@ -92,8 +92,8 @@ function* fetchAllPlaces(action) {
 
 function* fetchPlaceDetails(action) {
   try {
-      const venue = yield call(Api.fetchPlaceDetails, action.payload);
-      yield put(handlePlaceDetails({venue}));
+      const place = yield call(Api.fetchPlaceDetails, action.payload);
+      yield put(handlePlaceDetails({place}));
    } catch (e) {
       yield put(handleError({message: e.message}));
    }

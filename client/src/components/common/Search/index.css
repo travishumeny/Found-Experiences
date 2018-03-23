@@ -9,7 +9,7 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-top: 25px;
-  width: 300px;
+  width: 290px;
   height: 130px;
 }
 .search input {
@@ -48,7 +48,7 @@
   color: #9b9b9b;
 }
 .search-term {
-  width: 255px;
+  width: 250px;
 }
 .search-location {
   width: 160px;
@@ -59,7 +59,7 @@
   height: 40px;
   border: none;
   border-radius: 4px;
-  background-color: #ff5f5f;
+  background-color: #9b0a3f;
   margin-left: 20px;
   -webkit-box-shadow: 0 12px 21px 0 rgba(0, 0, 0, 0.24);
           box-shadow: 0 12px 21px 0 rgba(0, 0, 0, 0.24);
@@ -75,7 +75,7 @@
 }
 .search button:hover {
   cursor: pointer;
-  background-color: #ff7e7e;
+  background-color: #fc5894;
 }
 .search button:disabled {
   cursor: not-allowed;

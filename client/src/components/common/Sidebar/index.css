@@ -8,6 +8,7 @@
   background-color: #ffffff;
   -webkit-box-shadow: 0 0 34px 0 rgba(180, 12, 73, 0.32);
   box-shadow: 0 0 34px 0 rgba(180, 12, 73, 0.32);
+  border-radius: 10px;
 }
 
 .sidebar.recents {
@@ -23,15 +24,15 @@
   font-family: Montserrat-Medium;
   font-size: 16px;
   color: #4a4a4a;
-  text-align: center;
-  padding: 27px 0;
+  text-align: left;
+  padding: 27px 25px;
 }
 
 .sidebar-header-underline {
   width: 70px;
   height: 2px;
-  border-bottom: solid 2px #c4c0ff;
-  margin: 0 auto;
+  border-bottom: solid 2px #c4859c;
+  margin: 0 25px;
 }
 
 .sidebar-list {
@@ -43,8 +44,8 @@
   font-family: Montserrat-Medium;
   font-size: 14px;
   color: #9b9b9b;
-  text-align: center;
-  padding: 19px 0 17px 0;
+  text-align: left;
+  padding: 19px 0 17px 10px;
   -webkit-transition: background 300ms ease-out;
   transition: background 300ms ease-out;
 }

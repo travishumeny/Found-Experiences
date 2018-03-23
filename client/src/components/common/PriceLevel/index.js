@@ -11,9 +11,9 @@ const PriceLevel = ({value}) => {
   const colors = ['#c4ffcf', '#91d89e', '#61bf72', '#3a914a']
 
   const styles = colors.map(
-    (c, i) => value >= i + 1
+    (color, i) => value >= i + 1
     ? {
-      'backgroundColor': c
+      'backgroundColor': color
     }
     : {
       'border': '1px solid gray',

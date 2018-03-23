@@ -2,10 +2,10 @@ import {combineReducers} from 'redux'
 import * as consts from '../consts'
 
 
-const venues = (state = [], {type, payload}) => {
+const places = (state = [], {type, payload}) => {
 	switch(type){
 		case consts.SEARCH_PLACES_API_SUCCESS:
-			return payload.venues
+			return payload.places
 		default:
 			return state
 	}
@@ -14,7 +14,7 @@ const venues = (state = [], {type, payload}) => {
 const placeDetails = (state = {}, {type, payload}) => {
 	switch(type){
 		case consts.PLACE_DETAILS_API_SUCCESS:
-			return payload.venue
+			return payload.place
 		default:
 			return state
 	}
@@ -54,7 +54,7 @@ const loading = (state = false, {type, payload}) => {
 
 
 export default combineReducers({
-	venues,
+	places,
 	placeDetails,
 	recentSearches,
 	loading

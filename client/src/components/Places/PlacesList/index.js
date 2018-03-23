@@ -5,19 +5,19 @@ import './index.css'
 import {connect} from 'react-redux'
 
 
-const PlacesList = ({loading, venues = []}) => {
+const PlacesList = ({loading, places = []}) => {
 	return (
 		<section className="places">
 			{loading ?
 				<Loading/> :
-				venues.map(v => (<PlacesElement key={v.id} {...v} />))
+				places.map(p => (<PlacesElement key={p.id} {...p} />))
 			}
 		</section>
 	)
 }
 
-const mapStateToProps = ({loading, venues}) => {
-	return{loading, venues}
+const mapStateToProps = ({loading, places}) => {
+	return{loading, places}
 }
 
 export default connect(mapStateToProps, undefined)(PlacesList)

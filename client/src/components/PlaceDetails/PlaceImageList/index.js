@@ -6,8 +6,8 @@ import {connect} from 'react-redux'
 
 const PlaceImageList = ({photos = []}) => (
 	<section className="place-image-list">
-		{photos.map((p, i) => (
-			<PlaceDetailsImage key={i} {...p}/>
+		{photos.map((photo, i) => (
+			<PlaceDetailsImage key={i} {...photo}/>
 		))}
 	</section>
 )
