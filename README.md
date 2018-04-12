@@ -1,9 +1,5 @@
 # Found Experiences
 
-#### See the live demo here!
-
-http://found-experiences.herokuapp.com/places
-
 ## Intro
 
 This in-development, travel-related tool is built as a foundational piece for a boutique travel startup. Its intention is to collect interesting places in cities around the world so that customized itineraries can be created for clients. The front-end features querying of a prominent travel API.
