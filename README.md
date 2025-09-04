@@ -57,7 +57,3 @@ This app's code-base is meant to go on to be utilized by a team of developers th
 * Google Search API integration returning the first few sources of editorial source content per publication (stretch)
 * Ranking and weighting of editorial source content to be preferential (stretch)
 * Further fine-tuning and manual-entry data using modal windows on ElasticSearch front-end (stretch)
-
-## Authors
-
-* **Daniel Dyer** - [danielbdyer](https://github.com/danielbdyer)
